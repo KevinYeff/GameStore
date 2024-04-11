@@ -25,6 +25,22 @@ application will behave at runtime.
 
 The variable `app` is the representation of the ASP.NET Core web application
 itself. The `builder.Build()` call is what actually builds and configures the
-web application, returning this WebApplication instance.
+web application, returning this WebApplication instance.<br>
 
-> **_SUMMARY:_** <br>- `builder` is an object that allow us to configure the web application<br>- `app` it is he instance of the web application built and ready to be executed.
+For the same reason that app is already an instance of webApplication, it can
+be used for other configurations, i.e. configurations such as routing,
+middleware configurations, etc.<br>
+```c#
+app.MapGet("/", () => "Hello World!");
+
+app.Run();
+```
+Initially, in this lines, the basic behavior of the web application is being
+configured, in this case when a get request is received to the root of the
+application the request handling (`app.MapGet()` method) will be activated
+and the string "Hello World!" will be returned as a response.
+the `app.Run()` initiattes the application's request processing loop. it is
+the primary entry point for handling incoming HTPP requests and sending
+corresponding responses.
+
+> **_SUMMARY:_** <br>- `builder` is an object that allow us to configure the web application.<br>- `app` it is he instance of the web application built and ready to be executed.<br>- ``app.MapGet()`  defines a routing path for the GET request.<br>- `app.Run()` executes the web application/initializes a request processing loop to process requests based on configuration.
