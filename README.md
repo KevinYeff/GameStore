@@ -43,4 +43,4 @@ the `app.Run()` initiattes the application's request processing loop. it is
 the primary entry point for handling incoming HTPP requests and sending
 corresponding responses.
 
-> **_SUMMARY:_** <br>- `builder` is an object that allow us to configure the web application.<br>- `app` it is he instance of the web application built and ready to be executed.<br>- ``app.MapGet()`  defines a routing path for the GET request.<br>- `app.Run()` executes the web application/initializes a request processing loop to process requests based on configuration.
+> **_SUMMARY:_** <br>- `builder` is an object that allow us to configure the web application.<br>- `app` it is he instance of the web application built and ready to be executed.<br>- `app.MapGet()`  defines a routing path for the GET request.<br>- `app.Run()` executes the web application/initializes a request processing loop to process requests based on configuration.
