@@ -75,9 +75,23 @@ the `appsettings.Development.json` only works in the development enviroment,
 for producction you may use the `appsettings.json` also allows more sets of
 configurations.
 
-## the `Properties/launchSettings.json`
+## The `Properties/launchSettings.json`
 The main porpuse of this file is to provide profiles, this profiles are a set
 of configrations for local development, it impacts on how the web application
 will run on our box/enviroment
 > **_NOTE:_** Nothing on this file `launchSetting.json` is going to be available in Production.
 
+## The '/bin and /obj' directories
+The bin and obj folders are part of the compilation and output process of
+an ASP.NET Core project. The `bin` folder contains the final binaries that
+are run when the application starts, while the `obj folder` contains temporary
+files and objects used during the build process.
+
+`/bin` This folder stores the binaries generated during the project build.
+This includes executable files (for example, the application's .dll file),
+as well as any other binary files (such as class libraries, assemblies, etc.)
+that the project may require to run.
+
+`/obj` This folder contains the object files generated during the project
+build. These object files are temporary and are used during the build process
+to produce the final binary files found in the `bin` folder.
