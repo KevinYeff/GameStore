@@ -44,3 +44,23 @@ the primary entry point for handling incoming HTPP requests and sending
 corresponding responses.
 
 > **_SUMMARY:_** <br>- `builder` is an object that allow us to configure the web application.<br>- `app` it is he instance of the web application built and ready to be executed.<br>- `app.MapGet()`  defines a routing path for the GET request.<br>- `app.Run()` executes the web application/initializes a request processing loop to process requests based on configuration.
+
+## The .csproj file
+
+This file is the project file, it will define the type of project that we have.
+
+`GameSttore.Api.csproj` 
+```c#
+<Project Sdk="Microsoft.NET.Sdk.Web">
+</Project>
+```
+This line of code will tell us that this is a web project and
+```c#
+    <PropertyGroup>
+    // targets the framework
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+```
+by default it will import a buch of libraries and dependancies for the project
