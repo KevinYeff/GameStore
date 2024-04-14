@@ -63,4 +63,21 @@ This line of code will tell us that this is a web project and
     <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 ```
-by default it will import a buch of libraries and dependancies for the project
+by default it will import a buch of libraries and dependancies for the project.
+
+# The .json files
+
+This files are configuratons where you can put everting that should not be
+hardcoded in your project,represent a set of configurations that could change
+across eviroments.
+
+the `appsettings.Development.json` only works in the development enviroment,
+for producction you may use the `appsettings.json` also allows more sets of
+configurations.
+
+## the `Properties/launchSettings.json`
+The main porpuse of this file is to provide profiles, this profiles are a set
+of configrations for local development, it impacts on how the web application
+will run on our box/enviroment
+> **_NOTE:_** Nothing on this file `launchSetting.json` is going to be available in Production.
+
