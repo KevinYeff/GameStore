@@ -95,3 +95,53 @@ that the project may require to run.
 `/obj` This folder contains the object files generated during the project
 build. These object files are temporary and are used during the build process
 to produce the final binary files found in the `bin` folder.
+
+# How to build run and debug the initial/default project
+
+In order o build we can use eiter the Soluion explorer or the cmli id' prefer
+to use the cmli. <br>
+While in:
+
+```bash
+nivek@YEFF:~/dotNet/GameStore$ pwd
+/home/nivek/dotNet/GameStore
+nivek@YEFF:~/dotNet/GameStore$ dotnet build
+MSBuild version 17.9.8+b34f75857 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  GameStore.Api -> /home/nivek/dotNet/GameStore/GameStore.Api/bin/Debug/net8.0/GameStore.Api.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.19
+nivek@YEFF:~/dotNet/GameStore$ 
+```
+Now we have our compiled version of our web application, go to `/bin/Debug/net8.0`
+to see the `.dll` file, this file will contain te compiled code of our web app<br>
+In essence it is the translated version of your c# code into assembly.
+
+With this file, we now can run the web application or debug it.<br>
+
+To debug the web app just configure it by pressing f5 then select c#
+choos one of the default configurations and it's done.
+
+To run de web app without debug, we can eiter use the Solution explorer or the
+cmli id' prefer to use cmli so go to:
+
+```bash
+nivek@YEFF:~/dotNet/GameStore/GameStore.Api$ pwd
+/home/nivek/dotNet/GameStore/GameStore.Api
+nivek@YEFF:~/dotNet/GameStore/GameStore.Api$ dotnet run
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5073
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/nivek/dotNet/GameStore/GameStore.Api
+```
+click on the link to see te web app.
