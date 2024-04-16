@@ -145,3 +145,6 @@ info: Microsoft.Hosting.Lifetime[0]
       Content root path: /home/nivek/dotNet/GameStore/GameStore.Api
 ```
 click on the link to see te web app.
+
+[A brief introduction to REST API](https://x.com/MissingYeff/status/1780295080672100555)
+
